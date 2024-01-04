@@ -1,0 +1,22 @@
+import { Link } from 'react-router-dom';
+import Nav from '../Nav/Nav';
+import './header.scss';
+
+export default function Header() {
+  return (
+    <header className='et-header'>
+      <div className='container 2xl mx-auto flex flow-row justify-between h-inherit content-center'>
+        <div className='inline-flex flex-row items-center'>
+          <a className='me-8' to='/'>
+            logo
+          </a>
+          <Nav />
+        </div>
+        <div className='inline-flex flex-row items-center'>
+          <Link className='me-4' to='/'>Login</Link>
+          <Link to='/'>Sign Up</Link>
+        </div>
+      </div>
+    </header>
+  );
+}
