@@ -1,7 +1,23 @@
 .et-hero {
-  height: 100vh;
+
+  @media (min-width: 769px) {
+    height: calc(100vh - 70px);
+    
+  }
+}
+
+.et-hero__img {
+  height: 70%;
+  max-height: 800px;
   width: 100%;
-  background-image: url(../../assets/img/fitsum-admasu-oGv9xIl7DkY-unsplash-1920.jpg);
+  background: url(../../assets/img/john-arano-h4i9G-de7Po-unsplash-1920.webp) no-repeat 50% 50%;
   background-size: cover;
-  background-position: center center;
+
+  @media (max-width: 768px) {
+    background: url(../../assets/img/john-arano-h4i9G-de7Po-unsplash-640.webp) no-repeat 50% 50%;
+  }
+}
+
+.et-hero__container {
+  height: 30%;
 }

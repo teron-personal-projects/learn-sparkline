@@ -7,7 +7,7 @@ export default function Header() {
     <header className='et-header'>
       <div className='container 2xl mx-auto flex flow-row justify-between h-inherit content-center'>
         <div className='inline-flex flex-row items-center'>
-          <a className='me-8' to='/'>
+          <a className='me-8' href='/'>
             logo
           </a>
           <Nav />
