@@ -1,5 +1,15 @@
 # The MERN Stack
 
+## Content:
+
+- Intro to MERN
+- DB Concepts
+- Getting Started with MongoDB Atlas
+- Creating the Backend of the exercise tracker app
+- React Intro
+- Creating the Frontend of the exercise tracker app
+- Connection the Frontend to the Backend (Time: 1:19)
+
 ## What is the MERN Stack
 
 The Stack consists of the following Tech:

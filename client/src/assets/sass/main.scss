@@ -1,6 +1,10 @@
-@use './01-base/reset';
-@use './01-base/global';
+// normalize.css
+@use './01-base/normalize';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// Tailwind CSS
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
+
+// custom global styles
+@use './01-base/global';
