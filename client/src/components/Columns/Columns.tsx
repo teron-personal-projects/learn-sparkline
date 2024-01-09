@@ -1,31 +1,31 @@
-import { cva, type VariantProps } from "class-variance-authority";
-
 import './columns.scss';
 
 type ColumnsProps = {
-  children: React.ReactNode
-  direction?: 'row' | 'column'
+  children: React.ReactNode,
+  colsClasses?: string,
 }
 
-export const Columns = ({ children, direction } : ColumnsProps ) => {
-  
+export const Columns = ({ children, colsClasses } : ColumnsProps ) => {
+  const classes = colsClasses ? colsClasses : '';
 
   return (
-    <div className='et-columns text-white flex flex-col justify-center '>
+    <div className={`et-columns flex ${classes}`}>
       {children}
-      <div className='container sm mx-auto'>
-        
-      </div>
     </div>
-  )
+  );
 }
 
-export const Column = ({context}: {context: React.ReactNode}) => {
+
+type ColumnProps = {
+  children: React.ReactNode,
+  colClasses?: string,
+}
+
+export const Column = ({ children, colClasses }: ColumnProps ) => {
+  const classes = colClasses ? colClasses : '';
   return(
-    <>
-    {context}
-    </>
-  )
+    <div className={`et-column basis-full ${classes}`}>
+    {children}
+    </div>
+  );
 }
-
-

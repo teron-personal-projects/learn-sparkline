@@ -42,4 +42,25 @@ Integration is facilitated through SDKs and APIs.
 Facebook, or GitHub for user authentication. These providers offer OAuth-based authentication mechanisms, often via 
 SDKs or APIs for easy integration.
 
-## 
+---
+
+## Sessions and Cookies
+
+Servers need a way to track users from page to page, this is where sessions and cookies come into play.
+
+### Session
+
+A session represents one visit to one site by a browser. With programming a server can create a session ID when a visit
+logins into the site. The session ID identifies that browser and last for a set time, after it's destroyed.  
+
+The server can save extra info along with the ID.
+
+## Cookies
+
+A Key/Value Pair that saves any info that the website chooses to save.
+A server can create, read, update, and delete from a cookie.
+
+I this project we only need the cookie to save the users session id.
+
+## OAuth2.0
+

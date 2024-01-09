@@ -1,25 +1,28 @@
-import './hero.scss'
+import { Children } from 'react';
+import './hero.scss';
 
+type HeroProps = {
+  children?: React.ReactNode,
+  bgImgLabel?: string,
+  heroClasses?: string,
+  heroContentClasses?: string,
+}
 
-export default function Hero({title, subtitle, cta }) {
+export default function Hero({ children, bgImgLabel, heroClasses, heroContentClasses }: HeroProps ) {
+  const hasChildren = Children.count(children) > 0;
+  const bgImgClass = hasChildren ? 'et-hero__img--with-content' : '';
+  const classes = heroClasses ? heroClasses : '';
+  const contentClasses = heroContentClasses ? heroContentClasses : '';
 
   return (
-    <div className='et-hero block relative'>
-      <div className='et-hero__img' aria-label="Hero Section with background image. Image of a person working out. This person's back is facing the camera, while they hold a bar with weights above their head. Photo by John Arano on Unsplash.">
+    <div className={`et-hero ${classes}`}>
+      <div className={`et-hero__img ${bgImgClass}`} aria-label={bgImgLabel}>
       </div>
-      <div className='et-hero__context container mx-auto 2xl flex py-16'>
-        { title ? (
-          <div className='w-6/12 pe-4'>
-            <h1 className='text-6xl font-black '>{title}</h1>
-          </div>
-        ) : null }
-        { subtitle ? (
-          <div className='w-6/12 pl-4'>
-            <p className='text-3xl mb-8'>{subtitle}</p>
-            {cta ? cta : null}
-          </div>
-        ) : null }
-      </div>
+      { children ? (
+        <div className={`et-hero__content ${contentClasses}`}>
+          {children}
+        </div>
+      ) : null }
     </div>
   )
 }

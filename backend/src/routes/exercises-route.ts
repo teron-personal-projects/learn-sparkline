@@ -1,7 +1,7 @@
 import express from 'express';
 
 const router = express.Router();
-import Exercise from '../models/exercise.model.js';
+import Exercise from '../models/exercise-model.js';
 
 router.route('/').get((req, res) => {
   console.log('Exercise.find()');

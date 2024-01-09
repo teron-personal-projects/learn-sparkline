@@ -5,3 +5,7 @@
 
 // ignore all .env files
 **/.env
+
+// ignore ssl certificates
+**/key.pem
+**/cert.pem

@@ -51,6 +51,8 @@ We will use mongoDB Atlas for our mongoDB.
 You can run mongoDB on your local env however, Atlas makes things so easy that 
 it's worth using even for a local development.
 
+If we were not using Atlas we would have to install mongdb in the project via npm.
+
 ## Starting with mongoDB Atlas
 
 The 1st thing you need to do is create a new cluster. The option we will choose is
@@ -99,7 +101,7 @@ Create a backend/server.js file. This file is the entry point of the backend app
 ## setup the models for the DB
 
 In the backend create a folder called 'models'. Create
-two files 'exercise.model.js' and 'user.model.js'.
+two files 'exercise-model.js' and 'user-model.js'.
 
 Models in relation to DBs organize and manage data interactions. They validate data, handle business logic,
 and simplify database operations like 'CRUD'. 
@@ -109,11 +111,11 @@ and simplify database operations like 'CRUD'.
 Create endpoints that allow us to do CRUD operations. In the server.js File import the routes files and use them as middleware functions.
 
 ```js
-import exercisesRouter from './routes/exercises.js';
-import usersRouter from './routes/users.js';
+import exercisesRouter from './routes/exercises-route.js';
+import usersRouter from './routes/user-route.js';
 
 app.use('/api/exercises', exercisesRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
 ```
 
 Then in the route files, we define the endpoints and the logic for each endpoint.
