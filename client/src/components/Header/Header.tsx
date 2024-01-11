@@ -6,11 +6,14 @@ import { UserContext } from '../../context/user-context.js';
 
 
 export default function Header() {
-  const { isLoggedIn } = useContext(UserContext);
+  const { isLoggedIn, setIsLoggedIn, setCurrentUser, setTokenInfo } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem('userData');
+    setIsLoggedIn(false);
+    setCurrentUser(null);
+    setTokenInfo(null);
     navigate("/");
   }
   
